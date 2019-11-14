@@ -156,4 +156,9 @@ client.on('message', message => {
 	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
 })
 
+client.on('message', message => {
+    if(message.content.toLowerCase() === 'pubg?')
+	message.channel.send('ja maar dan moet <@271014909402152966> wel komen nu nu');
+})
+
 client.login(process.env.token);

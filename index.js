@@ -122,7 +122,7 @@ client.on('message', message => {
         
         .setTitle('Lokale hoer')
         .setColor(0xee34c9)
-        .setDescription('Hier op de ' + + ' is <@203837717107179521> de lokale hoer. \n Voel je vrij om hem ff een berichtje te sturen voor wilde seks.') 
+        .setDescription('Hier op de server is <@203837717107179521> de lokale hoer. \n Voel je vrij om hem ff een berichtje te sturen voor wilde seks.') 
         .setImage('https://f.jwwb.nl/public/t/v/b/fonds/foto.jpg')
 
       message.channel.send(embed);

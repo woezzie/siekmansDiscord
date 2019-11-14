@@ -107,36 +107,7 @@ client.on('message', message => {
     }
   });
 
-module.exports = class AvatarCommand extends Command {
-    constructor(client) {
-        super(client, {
-            name:"avatar",
-            aliases: ["profilepicture"],
-            group: 'misc',
-            memberName: 'avatar',
-            description: 'Laat de Avatar zien van een gebruiker',
-            args: [
-                {
-                    type:"user",
-                    prompt:"Van wie wil je de avatar zien?",
-                    key:"user",
-                    default: msg => msg.author
-                }
-            ]
-        })
-    }
-    run(msg, { user }) {
-
-        let embed = new RichEmbed()
-        .setTitle(`${user.tag}s zijn Avatar!`)
-        .setURL(user.displayAvatarURL)
-        .setImage(user.displayAvatarURL)
-        .setColor("RANDOM")
-        msg.embed(embed)
-    
-    }
-}
-
+  
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 
 client.on('message', message => {
@@ -165,5 +136,4 @@ client.on('message', message => {
 })
 
 
-//test
 client.login(process.env.token);

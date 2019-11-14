@@ -145,7 +145,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(message.content.toLowerCase() === `${prefix}user-info`)
-	message.channel.send(`Je gebruikersnaam: ${message.author.username}\nJe ID: ${message.author.id}`);
+	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
 })
 
 

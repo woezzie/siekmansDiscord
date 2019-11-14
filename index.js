@@ -122,9 +122,8 @@ client.on('message', message => {
         
         .setTitle('Lokale hoer')
         .setColor(0xee34c9)
-        .setDescription('Hier op de ' +  + ', \n Ik zie dat je denkt aan zelfmoord. \n De grote kerk in Elburg is een perfecte plek om vanaf te springen!') 
-        .setImage('https://upload.wikimedia.org/wikipedia/commons/e/e5/Toren_Grote_of_Sint-Nicolaaskerk_Elburg.jpg')
-        .setFooter('Dit bericht werd mede mogelijk gemaakt door de grote kerk in Elburg', 'https://www.geelvinck.nl/assets/Elburg-Grote-Kerk--300x300.jpg');
+        .setDescription('Hier op de ' + {server} + ' is <@203837717107179521> de lokale hoer. \n Voel je vrij om hem ff een berichtje te sturen voor wilde seks.') 
+        .setImage('https://f.jwwb.nl/public/t/v/b/fonds/foto.jpg')
 
       message.channel.send(embed);
     }

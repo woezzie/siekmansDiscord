@@ -148,6 +148,13 @@ client.on('message', message => {
 	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
 })
 
-
+if (message.content.startsWith(config.prefix + 'avatar')) {
+    const user = message.mentions.users.first() || message.author;
+    const avatarEmbed = new Discord.RichEmbed()
+        .setColor(0x333333)
+        .setAuthor(user.username)
+        .setImage(user.avatarURL);
+    message.channel.send(avatarEmbed);
+}
 
 client.login(process.env.token);

@@ -148,7 +148,7 @@ client.on('message', message => {
 	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
 })
 
-if (message.content.startsWith(config.prefix + 'avatar')) {
+if (message.content.startsWith(`${prefix}avatar`)) {
     const user = message.mentions.users.first() || message.author;
     const avatarEmbed = new Discord.RichEmbed()
         .setColor(0x333333)

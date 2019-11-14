@@ -106,21 +106,6 @@ client.on('message', message => {
     }
   });
 
-  client.on('message', message => {
-    if (message.content === `${prefix}zelfmoord`) {
-
-      const embed = new RichEmbed()
-        
-        .setTitle('Hulp met zelfmoord')
-        .setColor(0xee5534)
-        .setDescription('Hey ' + message.author + ', \n Ik zie dat je denkt aan zelfmoord. \n De grote kerk in Elburg is een perfecte plek om vanaf te springen!') 
-        .setImage('https://upload.wikimedia.org/wikipedia/commons/e/e5/Toren_Grote_of_Sint-Nicolaaskerk_Elburg.jpg')
-        .setFooter('Dit bericht werd mede mogelijk gemaakt door de grote kerk in Elburg', 'https://www.geelvinck.nl/assets/Elburg-Grote-Kerk--300x300.jpg');
-
-      message.channel.send(embed);
-    }
-  });
-
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 
 client.on('message', message => {

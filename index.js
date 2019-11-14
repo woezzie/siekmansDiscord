@@ -42,7 +42,7 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {
     if (message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])) {
 
-        if(message.content.startsWith(`${prefix}op gekankert`)) {
+        if(message.content.startsWith(`${prefix}opgekankert`)) {
     
             let member = message.mentions.members.first();
             member.kick().then((member) => {

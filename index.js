@@ -1,5 +1,6 @@
 const  Discord = require('discord.js');
 const { Client, RichEmbed } = require('discord.js');
+const { Command } = require('discord.js-commando')
 const {prefix, token, giphyToken} = require('./config.json');
 const client = new Discord.Client();
 const activities_list = [
@@ -106,20 +107,35 @@ client.on('message', message => {
     }
   });
 
-  client.on('message', message => {
-    if (message.content === `${prefix}zelfmoord`) {
-
-      const embed = new RichEmbed()
-        
-        .setTitle('Hulp met zelfmoord')
-        .setColor(0xee5534)
-        .setDescription('Hey ' + message.author + ', \n Ik zie dat je denkt aan zelfmoord. \n De grote kerk in Elburg is een perfecte plek om vanaf te springen!') 
-        .setImage('https://upload.wikimedia.org/wikipedia/commons/e/e5/Toren_Grote_of_Sint-Nicolaaskerk_Elburg.jpg')
-        .setFooter('Dit bericht werd mede mogelijk gemaakt door de grote kerk in Elburg', 'https://www.geelvinck.nl/assets/Elburg-Grote-Kerk--300x300.jpg');
-
-      message.channel.send(embed);
+module.exports = class AvatarCommand extends Command {
+    constructor(client) {
+        super(client, {
+            name:"avatar",
+            aliases: ["profilepicture"],
+            group: 'misc',
+            memberName: 'avatar',
+            description: 'Laat de Avatar zien van een gebruiker',
+            args: [
+                {
+                    type:"user",
+                    prompt:"Van wie wil je de avatar zien?",
+                    key:"user",
+                    default: msg => msg.author
+                }
+            ]
+        })
     }
-  });
+    run(msg, { user }) {
+
+        let embed = new RichEmbed()
+        .setTitle(`${user.tag}s zijn Avatar!`)
+        .setURL(user.displayAvatarURL)
+        .setImage(user.displayAvatarURL)
+        .setColor("RANDOM")
+        msg.embed(embed)
+    
+    }
+}
 
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 

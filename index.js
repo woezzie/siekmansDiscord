@@ -42,7 +42,7 @@ client.on('guildMemberAdd', member => {
 client.on('message', message => {
     if (message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])) {
 
-        if(message.content.startsWith(`${prefix}opgekankert met`)) {
+        if(message.content.startsWith(`${prefix}opgekankert`)) {
     
             let member = message.mentions.members.first();
             member.kick().then((member) => {
@@ -154,6 +154,11 @@ client.on('message', message => {
 client.on('message', message => {
     if(message.content.toLowerCase() === `${prefix}user-info`)
 	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
+})
+
+client.on('message', message => {
+    if(message.content.toLowerCase() === `${prefix}pubg?`)
+	message.channel.send(`Isg maar dan moet <@271014909402152966> wel komen`);
 })
 
 client.login(process.env.token);

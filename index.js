@@ -47,7 +47,7 @@ client.on('message', message => {
             let member = message.mentions.members.first();
             member.kick().then((member) => {
 
-                giphy.search('gifs', {"q": "bye"})
+                giphy.search('gifs', {"q": "get the fuck out"})
                     .then((response) => {
                         var totalReponses = response.data.length;
                         var responseIndex = Math.floor((Math.random() * 10) + 1) % totalReponses;

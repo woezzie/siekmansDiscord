@@ -148,10 +148,13 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === `${prefix}avatar`) {
+
       var member = message.mentions.first()
-      let embed = new Discord.RichEmbed()
+      const embed = new RichEmbed()
+
     .setImage(member.avatarURL)
     .setColor('#e69100')
+
       message.channel.send(embed)
     }
   });

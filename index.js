@@ -141,11 +141,6 @@ client.on('message', message => {
 	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
 })
 
-// client.on('message', message => {
-//     if(message.content.toLowerCase() === `${prefix}avatar`)
-//     message.reply(message.author.avatarURL);
-// })
-
 client.on('message', message => {
     if (message.content.startsWith("?avatar")) {
         var mentionned = message.mentions.users.first();

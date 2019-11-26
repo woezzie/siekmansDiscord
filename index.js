@@ -7,7 +7,7 @@ const activities_list = [
     "?help voor commands",
     "World of Warcraft",
     "Bril aan het poetsen",  
-    "Boas verkrachten",
+    "?help voor commands",
     "huiswerk nakijken",
     "VMware opzetten",
     "Fortnite",  

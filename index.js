@@ -161,7 +161,25 @@ client.on('message', message => {
 client.on("message", msg => {
     if(msg.content.startsWith(prefix + "help")) {
     msg.reply("Kijk in je DM's schatje:kissing_heart: ")
-    msg.author.sendMessage(`:arrow_down: Hier staan de commands! :arrow_down:  \nJammer dat je erom moest vragen ik had je slimmer ingeschat.`)
+    
+    const exampleEmbed = new Discord.RichEmbed()
+        .setColor('#0099ff')
+        .setTitle('Some title')
+        .setURL('https://discord.js.org/')
+        .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+        .setDescription('Some description here')
+        .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+        .addField('Regular field title', 'Some value here')
+        .addBlankField()
+        .addField('Inline field title', 'Some value here', true)
+        .addField('Inline field title', 'Some value here', true)
+        .addField('Inline field title', 'Some value here', true)
+        .setImage('https://i.imgur.com/wSTFkRM.png')
+        .setTimestamp()
+        .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+
+    channel.send(exampleEmbed);
+
     }
     });
 

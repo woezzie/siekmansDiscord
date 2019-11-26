@@ -141,21 +141,10 @@ client.on('message', message => {
 	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
 })
 
-// client.on('message', message => {
-//     if(message.content.toLowerCase() === `${prefix}avatar`)
-//     message.reply(message.author.avatarURL);
-// })
-
 client.on('message', message => {
-    if (message.content === '!avatar') {
-      // Remove the "var" line; it isn't necessary.
-      let embed = new Discord.RichEmbed()
-      // Replace "message.member" with "message.author"
-    .setImage(message.author.avatarURL)
-    .setColor('#275BF0')
-      message.channel.send(embed)
-    }
-});
+    if(message.content.toLowerCase() === `${prefix}avatar`)
+    message.reply(message.author.avatarURL);
+})
 
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 

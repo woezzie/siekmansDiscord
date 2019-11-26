@@ -147,14 +147,15 @@ client.on('message', message => {
 // })
 
 client.on('message', message => {
-    if (message.content === `${prefix}avatar`) {
-      var member = message.mentions.first()
+    if (message.content === '!avatar') {
+      // Remove the "var" line; it isn't necessary.
       let embed = new Discord.RichEmbed()
-    .setImage(member.avatarURL)
-    .setColor('#e69100')
+      // Replace "message.member" with "message.author"
+    .setImage(message.author.avatarURL)
+    .setColor('#275BF0')
       message.channel.send(embed)
     }
-  });
+});
 
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 

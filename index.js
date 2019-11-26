@@ -129,6 +129,18 @@ client.on('message', message => {
     }
   });
 
+//--------------------Commands-------------------------------------------------------------------------------------------------------
+
+client.on('message', message => {
+    if(message.content.toLowerCase() === `${prefix}suicide`)
+    message.channel.send('Ik ken dat niet, ik denk dat je **?zelfmoord** bedoeld.');
+})
+
+client.on('message', message => {
+    if(message.content.toLowerCase() === `${prefix}user-info`)
+	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
+})
+
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 
 client.on('message', message => {
@@ -147,17 +159,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-    if(message.content.toLowerCase() === `${prefix}suicide`)
-    message.channel.send('Ik ken dat niet, ik denk dat je **?zelfmoord** bedoeld.');
-})
-
-client.on('message', message => {
-    if(message.content.toLowerCase() === `${prefix}user-info`)
-	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
-})
-
-client.on('message', message => {
-    if(message.content.toLowerCase() === `${prefix}pubg?`)
+    if(message.content.toLowerCase() === 'pubg?')
 	message.channel.send(`Isg maar dan moet <@271014909402152966> wel komen`);
 })
 

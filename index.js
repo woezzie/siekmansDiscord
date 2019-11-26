@@ -141,10 +141,27 @@ client.on('message', message => {
 	message.channel.send(`**Je gebruikersnaam:** ${message.author.username}\n**Je ID:** ${message.author.id}`);
 })
 
+// client.on('message', message => {
+//     if(message.content.toLowerCase() === `${prefix}avatar`)
+//     message.reply(message.author.avatarURL);
+// })
+
 client.on('message', message => {
-    if(message.content.toLowerCase() === `${prefix}avatar`)
-    message.reply(message.author.avatarURL);
-})
+    if (message.content.startsWith("?avatar")) {
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var x5bzm = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("#0c79ec")
+        .setImage(`${x5bzm.avatarURL}`)
+      message.channel.sendEmbed(embed);
+    }
+});
 
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 

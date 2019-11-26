@@ -160,32 +160,11 @@ client.on('message', message => {
 
 client.on("message", msg => {
     if(msg.content.startsWith(prefix + "help")) {
-    msg.reply("تم ارسل رسالة في خاصك :ok_hand:")
+    msg.reply("Kijk in je DM's schatje:kissing_heart: ")
     msg.author.sendMessage(`***:arrow_down:|| Admin || Admin ||:arrow_down:
-    =-============================================-=***
-    \`\`\`${prefix}clear < Number >
-    ${prefix}kick < Mention > < Reason > لاعطاء طرد للعضو
-    ${prefix}ban < Mention > < Reason > لاعطاء حظر للعضو
-    ${prefix}mute < Mention > < Reason > || لاعطاء العضو ميوت
-    ${prefix}unmute < Mention > < Reason > || لفك الميوت عن العضو
-    ${prefix}bc < Message > || لارسال برودكاست 
-    ${prefix}giveaway || لصنع قيف اوي
-    ${prefix}mutechannel || لتفغيل الشات الكتابية
-    ${prefix}unmutechannel || لتفعيل الشات الكتابية
-    ${prefix}cv < Name > || لانشاء روم صوتي
-    ${prefix}ct < Name > || لانشاء روم كتابي
     \`\`\`
-    ***=-============================================-=
-    :arrow_down:|| Public || Public ||:arrow_down:***
+    
     \`\`\`
-    ${prefix}ping || لمعرفه سرعت اتصال البوت
-    ${prefix}avatar < Mention > || يعرضلك صورت البروفايل الخاصه بك
-    ${prefix}id || يعرضلك معلوماتك
-    ${prefix}servers || يعرضلك معلومات السيرفر
-    ${prefix}topinv || يعرضلك افضل عضو جاب ناس للسيرفرك
-    ${prefix}new || لفتح تذكره
-    \`\`\`
-    ***=-============================================-=***
     `)
     }
     });

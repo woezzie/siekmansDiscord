@@ -142,7 +142,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-    if (message.content === '?avatar') {
+    if (message.content === '!avatar') {
       // Remove the "var" line; it isn't necessary.
       let embed = new Discord.RichEmbed()
       // Replace "message.member" with "message.author"
@@ -150,7 +150,7 @@ client.on('message', message => {
     .setColor('#275BF0')
       message.channel.send(embed)
     }
-});
+});;
 
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 

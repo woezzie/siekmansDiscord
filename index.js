@@ -161,7 +161,7 @@ client.on('message', message => {
 client.on("message", msg => {
     if(msg.content.startsWith(prefix + "help")) {
     msg.reply("Kijk in je DM's schatje:kissing_heart: ")
-    msg.author.sendMessage(`***:arrow_down:|| Admin || Admin ||:arrow_down:
+    msg.author.sendMessage(`:arrow_down:Hier staan de commands, Kmoet wel zeggen dat je kkr dom bent...
     \`\`\`
     
     \`\`\`

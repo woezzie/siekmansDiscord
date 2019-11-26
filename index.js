@@ -169,8 +169,7 @@ client.on("message", msg => {
     ${prefix}avatar
     ${prefix}zelfmoord
     ${prefix}localkech
-    ${prefix}help
-    \`\`\`
+    ${prefix}help\`\`\`
     `)
     }
     });

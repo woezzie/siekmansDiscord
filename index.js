@@ -143,7 +143,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(message.content.toLowerCase() === `${prefix}avatar`)
-    message.reply(message.author.avatarURL);
+    message.reply(message.member.avatarURL);
 })
 
 //--------------------Respond-messages------------------------------------------------------------------------------------------------

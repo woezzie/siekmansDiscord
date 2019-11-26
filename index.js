@@ -161,16 +161,7 @@ client.on('message', message => {
 client.on("message", msg => {
     if(msg.content.startsWith(prefix + "help")) {
     msg.reply("Kijk in je DM's schatje:kissing_heart: ")
-    msg.author.sendMessage(`:arrow_down: Hier staan de commands! :arrow_down:  \nJammer dat je erom moest vragen ik had je slimmer ingeschat.
-    \`\`\`
-    ${prefix}opgekankert
-    ${prefix}weggekankert
-    ${prefix}user-info
-    ${prefix}avatar
-    ${prefix}zelfmoord
-    ${prefix}localkech
-    ${prefix}help\`\`\`
-    `)
+    msg.author.sendMessage(`:arrow_down: Hier staan de commands! :arrow_down:  \nJammer dat je erom moest vragen ik had je slimmer ingeschat.`)
     }
     });
 

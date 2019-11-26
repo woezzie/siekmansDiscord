@@ -146,6 +146,16 @@ client.on('message', message => {
     message.reply(message.author.avatarURL);
 })
 
+client.on('message', message => {
+    if (message.content === `${prefix}avatar`) {
+      var member = message.mentions.first()
+      let embed = new Discord.RichEmbed()
+    .setImage(member.avatarURL)
+    .setColor('#e69100')
+      message.channel.send(embed)
+    }
+  });
+
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 
 client.on('message', message => {

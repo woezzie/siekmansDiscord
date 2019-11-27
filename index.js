@@ -58,15 +58,24 @@ client.on('message', message => {
                         })
                     
                     }).catch(() => {
-                        message.channel.send('Je moet ook zeggen wie ik moet kicken, droeftoeter!');
+                        message.channel.send('werkt nie');
                     })
-            })
-
-            
-        }  
-    }
-    
-})
+            }).catch(err => {
+                // An error happened
+                // This is generally due to the bot not being able to kick the member,
+                // either due to missing permissions or role hierarchy
+                message.reply('WAT ik mag deze niet kicken');
+                // Log the error
+                console.error(err);
+              });
+            } else {
+              message.reply('Deze kerel zit helemaal niet eens in de server');
+            }
+          } else {
+            message.reply('Je moet ook zeggen wie ik een oplawaaier moet geven');
+          }
+        }
+)
 
 client.on('message', message => {
     if (message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])) {

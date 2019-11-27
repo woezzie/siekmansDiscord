@@ -189,4 +189,14 @@ client.on('message', message => {
 	message.channel.send(`Isg maar dan moet <@271014909402152966> wel komen`);
 })
 
+client.on('message', message => {
+    if(message.content.toLowerCase() === 'wie is siekmans?')
+	message.channel.send(`Je beste maat`);
+})
+
+client.on('message', message => {
+    if(message.content.toLowerCase() === 'wie is <@643376344314413057>?')
+	message.channel.send(`Een enige echte netwerkbeheer strijder`);
+})
+
 client.login(process.env.token);

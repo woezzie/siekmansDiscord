@@ -168,6 +168,13 @@ client.on("message", msg => {
 }
     });
 
+    client.on('message', message => {
+        if(message.content.toLowerCase() === `${prefix}invite`)
+        message.channel.send(`https://discordapp.com/oauth2/authorize?client_id=643376344314413057&scope=bot&permissions=805314622`);
+    })
+
+    
+
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 
 client.on('message', message => {

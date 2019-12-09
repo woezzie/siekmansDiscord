@@ -158,6 +158,29 @@ client.on('message', message => {
     }
 });
 
+exports.run = (bot, msg, params) => {
+
+    msg.delete();
+  
+    if(!params.join(" ")){
+      return msg.channel.send("Wat moet ik zeggen dan?")
+    }
+    msg.channel.send(params.join(" "));
+  };
+  
+  exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: ['spreek', 'zeg'],
+    permLevel: 0
+  };
+  
+  exports.help = {
+    name: "spreek",
+    description: "laat de bot wat zeggen",
+    usage: "spreek [TEXT]"
+  };
+
 client.on("message", msg => {
     if(msg.content.startsWith(prefix + "help")) {
     msg.reply("Kijk in je DM's schatje:kissing_heart: ")

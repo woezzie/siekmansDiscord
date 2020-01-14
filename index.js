@@ -17,6 +17,17 @@ const activities_list = [
 var GphApiClient = require('giphy-js-sdk-core')
 giphy = GphApiClient(giphyToken)
 
+fs.readdir("./test/randomshit/", (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+      if (!file.endsWith(".js")) return;
+      let props = require(`./test/randomshit/${file}`);
+      let commandName = file.split(".")[0];
+      console.log(`Attempting to load command ${commandName}`);
+      client.commands.set(commandName, props);
+    });
+  });
+
 //--------------------Update-Knop-&-Status-randomizer---------------------------------------------------------------------------------
 
 

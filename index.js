@@ -13,6 +13,11 @@ const activities_list = [
     "Fortnite",  
     "Kutkinders les geven"
     ];
+    const wijsheid_lijst = [
+        "Boas is stiekem homo en hij heeft het al een keer bekent gemaakt in 2017 op Itslearning",
+        "Jappie is nog steeds na de stage verliefd op vinnie en appt hem elke dag",
+        "In Hattem bestaat er wat griezeligers dan Kladdegat. Weinig mensen hebben het kunnen spotten en het verschijnt het vaakst rond de bossen van Hattem", { files: ["./images/321.png"] },
+        ];
 
 var GphApiClient = require('giphy-js-sdk-core')
 giphy = GphApiClient(giphyToken)

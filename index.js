@@ -172,7 +172,11 @@ client.on("message", msg => {
         if(message.content.toLowerCase() === `${prefix}invite`)
         message.channel.send(`https://discordapp.com/oauth2/authorize?client_id=643376344314413057&scope=bot&permissions=805314622`);
     })
-
+    
+    client.on('message', message => {
+        if(message.content.toLowerCase() === `${prefix}banaan`)
+        message.channel.send("Je hebt de enige echte Jappie opgeroepen uit de jungle nu komt ie je halen:banana::skull: ", { files: ["./images/aapje.png"] });
+    })
     
 
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
@@ -206,5 +210,6 @@ client.on('message', message => {
     if(message.content.toLowerCase() === 'wie is <@643376344314413057>?')
 	message.channel.send(`Een enige echte netwerkbeheer strijder`);
 })
+
 
 client.login(process.env.token);

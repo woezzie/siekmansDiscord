@@ -177,11 +177,6 @@ client.on("message", msg => {
         message.channel.send(`https://discordapp.com/oauth2/authorize?client_id=643376344314413057&scope=bot&permissions=805314622`);
     })
     
-    client.on('message', message => {
-        if(message.content.toLowerCase() === `${prefix}banaan`)
-        message.channel.send("Je hebt de enige echte Jappie opgeroepen uit de jungle nu komt ie je halen:banana::skull: ", { files: ["./images/aapje.png"] });
-    })
-
     client.on('message', function (message) {
     if (message.author.bot) return;
     if (!message.content.startsWith("?")) return;

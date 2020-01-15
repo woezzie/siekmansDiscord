@@ -188,7 +188,7 @@ client.on("message", msg => {
     if (!message.content.startsWith("?")) return;
     var args = message.content.substring("?".length).split(" ");
     switch (args[0].toLowerCase()) {
-        case "vertel":
+        case "wijsheid":
             var response = helloResponses [Math.floor(Math.random()*helloResponses .length)];
 
             message.channel.send(response).then().catch(console.error);

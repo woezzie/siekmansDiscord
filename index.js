@@ -183,13 +183,10 @@ client.on("message", msg => {
         message.channel.send("Je hebt de enige echte Jappie opgeroepen uit de jungle nu komt ie je halen:banana::skull: ", { files: ["./images/aapje.png"] });
     })
 
-myBot.on('message', function (message) {
+    client.on('message', function (message) {
     if (message.author.bot) return;
-
     if (!message.content.startsWith("?")) return;
-
     var args = message.content.substring("?".length).split(" ");
-
     switch (args[0].toLowerCase()) {
         case "vertel":
             var response = helloResponses [Math.floor(Math.random()*helloResponses .length)];

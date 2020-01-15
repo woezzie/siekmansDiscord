@@ -184,6 +184,7 @@ client.on("message", msg => {
     })
 
     client.on('message', message => {
+        if(message.content.toLowerCase() === `${prefix}vertel`)
         var response = wijsheid_lijst[Math.floor(Math.random()*wijsheid_lijst.length)];
         message.reply(wijsheid_lijst);
         msg.channel.send(response).then().catch(console.error);

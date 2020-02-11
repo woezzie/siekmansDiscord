@@ -5,13 +5,13 @@ const client = new Discord.Client();
 const activities_list = [
     "Boas verkrachten", 
     "?help voor commands",
-    "World of Warcraft",
-    "Bril aan het poetsen",  
+    "Boas helpen op stage",
+    "Naar de gym gaan",  
     "?help voor commands",
-    "huiswerk nakijken",
-    "VMware opzetten",
+    "Beetje rukken",
+    "Marga opzoeken",
     "Fortnite",  
-    "Kutkinders les geven"
+    "Geilen op de kneu"
     ];
     var helloResponses = [
         "Boas is stiekem homo en hij heeft het al een keer bekent gemaakt in 2017 op Itslearning",
@@ -38,7 +38,7 @@ client.once('ready', () => {
 client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find(ch => ch.name === 'general');
     if (!channel) return;
-    channel.send(`Wie is ${member}? krijg het gevoel dat ie homo is :thinking:`);
+    channel.send(`Wie is ${member}? krijg het gevoel dat het een mafkees is:thinking:`);
   });
 
 //--------------------Kick-&-Ban-----------------------------------------------------------------------------------------------

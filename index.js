@@ -216,13 +216,13 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-    if(message.content.toLowerCase() === 'wie is siekmans?')
+    if(message.content.toLowerCase() === 'wie is jesse?')
 	message.channel.send(`Je beste maat`);
 })
 
 client.on('message', message => {
     if(message.content.toLowerCase() === 'wie is <@643376344314413057>?')
-	message.channel.send(`Een enige echte netwerkbeheer strijder`);
+	message.channel.send(`Een enige echte programmeer legende en daarnaast prof buikdanser`);
 })
 
 

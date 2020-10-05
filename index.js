@@ -192,14 +192,6 @@ client.on("message", msg => {
     }
 });
 
-client.on('?join', async message => {
-	// Join the same voice channel of the author of the message
-	if (message.member.voice.channel) {
-		const connection = await message.member.voice.channel.join();
-	}
-});
-
-
 //--------------------Respond-messages------------------------------------------------------------------------------------------------
 
 client.on('message', message => {
